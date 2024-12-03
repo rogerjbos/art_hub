@@ -1,0 +1,53 @@
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .image-card {
+    position: relative; /* Position for placing button in the bottom right */
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 300px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .image-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  .image-editions,
+  .image-description {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .collect-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #28a745; /* Green button */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+  
+  .collect-button:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+  

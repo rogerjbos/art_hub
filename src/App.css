@@ -1,3 +1,28 @@
+:root {
+  --dc-primary-color: #ff2670;
+  --dc-on-primary-color: #ffffff;
+  --dc-surface-color: light-dark(#ffffff, #1e1e1e);
+  --dc-on-surface-color: light-dark(#000000, #ffffff);
+  --dc-info-color: light-dark(#007aff, #0a84ff);
+  --dc-success-color: light-dark(#34c759, #30d158);
+  --dc-error-color: light-dark(#ff3b30, #ff453a);
+  --dc-max-border-radius: 25px
+}
+
+.form-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: white; /* Debug with a visible background */
+  padding: 20px;
+  border: 1px solid black; /* Debug with a visible border */
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  width: 400px;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -48,3 +73,16 @@ h1 {
   background-color: #d43d3d; /* Darker red on hover */
 }
 
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

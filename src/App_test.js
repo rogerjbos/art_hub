@@ -1,3 +1,5 @@
+//import { ConnectionDialog } from "dot-connect/react.js";
+// import WalletConnect from "./components/WalletConnect.js";
 import React, { useState } from "react";
 import ImageGallery from "./components/ImageGallery";
 import axios from "axios";
@@ -80,62 +82,21 @@ function App() {
           <img src={logo} alt="Art Hub Logo" className="app-logo" />
           <h1 className="app-title">Art Hub</h1>
         </div>
-        <button className="create-button" onClick={() => setShowForm(true)}>
+        <button className="create-button" onClick={() => setShowForm((prev) => !prev)}>
           Create
         </button>
       </div>
-      <ImageGallery images={images} />
       {showForm && (
         <div className="form-modal">
-          <div className="form-container">
-            <h2>Add New Image</h2>
-            <form onSubmit={handleSubmission}>
-              <label>
-                Select File:
-                <input type="file" onChange={changeHandler} required />
-              </label>
-              <label>
-                Name:
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  required
-                />
-              </label>
-              <label>
-                Description:
-                <textarea
-                  name="description"
-                  value={formData.description}
-                  onChange={handleInputChange}
-                  required
-                ></textarea>
-              </label>
-              <label>
-                Number of Editions:
-                <input
-                  type="number"
-                  name="editions"
-                  value={formData.editions}
-                  onChange={handleInputChange}
-                  required
-                  min="1"
-                />
-              </label>
-              <div className="form-buttons">
-                <button type="submit" disabled={uploading}>
-                  {uploading ? "Uploading..." : "Add"}
-                </button>
-                <button type="button" onClick={() => setShowForm(false)}>
-                  Cancel
-                </button>
-              </div>
-            </form>
-          </div>
+          <form className="upload-form" onSubmit={handleSubmission}>
+            {/* Form inputs here */}
+          </form>
         </div>
       )}
+      <ImageGallery images={images} />
+
+      {/* const [open, setOpen] = useState(false); */}
+      {/* <WalletConnect />; */}
     </div>
   );
 }

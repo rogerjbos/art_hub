@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@polkadot/api": "^15.0.1",
     "@polkadot/extension-dapp": "^0.56.2",
+    "@polkadot/types": "^15.0.1",
     "@reactive-dot/core": "^0.27.1",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",

@@ -10,7 +10,7 @@ function WalletConnect() {
       setError(null);
 
       // Request access to the wallet extension
-      const extensions = await web3Enable('My Polkadot App');
+      const extensions = await web3Enable('Art Hub');
       if (extensions.length === 0) {
         throw new Error('No wallet extensions found or access denied.');
       }
@@ -31,10 +31,10 @@ function WalletConnect() {
 
   return (
     <div className="wallet-connect-container">
-      <h1>Connect Your Polkadot Wallet</h1>
+      
       {walletAddress ? (
         <div className="wallet-info">
-          <p>Connected Wallet Address:</p>
+          <p>Connected Wallet</p>
           <p className="wallet-address">{walletAddress}</p>
         </div>
       ) : (

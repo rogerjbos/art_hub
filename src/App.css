@@ -9,18 +9,85 @@
   --dc-max-border-radius: 25px
 }
 
+/* Modal styling */
 .form-modal {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1000;
-  background-color: white; /* Debug with a visible background */
+  background-color: #fff;
   padding: 20px;
-  border: 1px solid black; /* Debug with a visible border */
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Container styling */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Form heading */
+.form-container h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Form group styling */
+.form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Button styling */
+.form-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.submit-button {
+  background-color: var(--dc-primary-color, #ff2670);
+  color: var(--dc-on-primary-color, #fff);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #d6205c;
+}
+
+.submit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }
 
 .header {
@@ -36,10 +103,31 @@
   align-items: center;
 }
 
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.connect-button {
+  background-color: var(--dc-primary-color);
+  color: var(--dc-on-primary-color);
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.connect-button:hover {
+  background-color: #d43d3d;
+}
+
 .app-logo {
   height: 60px; /* Adjust size as needed */
   width: auto;
-  margin-right: 10px; /* Space between logo and text */
+  margin-right: 10px;
 }
 
 .app-title {
@@ -59,8 +147,8 @@ h1 {
 }
 
 .create-button {
-  background-color: #ff4d4d; /* Red button */
-  color: white;
+  background-color: var(--dc-info-color);
+  color: var(--dc-on-primary-color); 
   border: none;
   border-radius: 4px;
   padding: 10px 15px;
@@ -70,7 +158,7 @@ h1 {
 }
 
 .create-button:hover {
-  background-color: #d43d3d; /* Darker red on hover */
+  background-color: #d43d3d;
 }
 
 button {

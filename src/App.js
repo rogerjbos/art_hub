@@ -1,5 +1,3 @@
-//const pinataApiKey = "6d6f90e786d6ee2b7f4a";
-//const pinataSecretApiKey = "468a00a6782d1b311fd424ee40ac68c0ab6637b40a92d6bf862cbd456570f5a6";
 import React, { useState } from "react";
 import ImageGallery from "./components/ImageGallery";
 import axios from "axios";

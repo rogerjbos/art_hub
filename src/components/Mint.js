@@ -6,7 +6,7 @@ const initApi = async () => {
   return api;
 };
 
-const queryCollectionDetails = async (collectionId) => {
+export const queryCollectionDetails = async (collectionId) => {
     const api = await initApi();
     const collectionDetails = await api.query.uniques.collection(collectionId);
     return { collectionId, collectionDetails };
@@ -26,7 +26,7 @@ const queryNextAssetId = async () => {
 
 // queryNextAssetId().catch(console.error);
 
-const mintNFT = async () => {
+export const mintNFT = async () => {
     const api = await initApi();
     const keyring = new Keyring({ type: 'sr25519' });
     const seed = process.env.REACT_APP_DOT_ART_WALLET_SEED;
@@ -67,7 +67,7 @@ const mintNFT = async () => {
     return { collectionId, itemId };
   };
   
-export default { mintNFT, queryCollectionDetails };
+// export { mintNFT, queryCollectionDetails };
 
 // const mintNFT = async () => {
 //     const api = await initApi();

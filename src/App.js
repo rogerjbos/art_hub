@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { web3Enable, web3Accounts } from '@polkadot/extension-dapp';
 import axios from 'axios';
 import ImageGallery from './components/ImageGallery';
-import logo from './assets/art-hub-logo.png';
-import './App.css';
+// import logo from './assets/art-hub-logo.png';
+import logo from './assets/Polkadot_Token_PolkadotToken_Pink.png';
+import './App.css'; 
 
 function App() {
   const [images, setImages] = useState(() => {
@@ -122,8 +123,13 @@ function App() {
     <div className="app-container">
       <div className="header">
         <div className="header-left">
-          <img src={logo} alt="Art Hub Logo" className="app-logo" />
-          <h1 className="app-title">Dot Art</h1>
+          {/* <img src={logo} alt="Art.Hub" className="app-logo" /> */}
+          <div className="logo-text">
+            Art
+            <img src={logo} alt="." className="logo" />
+            Hub
+          </div>
+          {/* <h1 className="app-title">Dot Art</h1> */}
         </div>
         <div className="header-right">
           <button className="create-button" onClick={() => setShowForm((prev) => !prev)}>

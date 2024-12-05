@@ -10,7 +10,7 @@ function WalletConnect() {
       setError(null);
 
       // Request access to the wallet extension
-      const extensions = await web3Enable('Art Hub');
+      const extensions = await web3Enable('Dot Art');
       if (extensions.length === 0) {
         throw new Error('No wallet extensions found or access denied.');
       }
